@@ -1,0 +1,81 @@
+.main-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(177, 177, 177);
+}
+
+.resume-header{
+    padding: 30px;
+    background-color: #16374e;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.resume-header-name{
+    font-size: 30px;
+}
+
+.resume-header-contacts{
+    display: flex;
+    gap: 15px;
+}
+
+.resume-body{
+    flex-grow: 1;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.body-sections{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.body-headers{
+    background-color: #eff1f2;
+    text-align: center;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #16374e;
+}
+
+.body-sections-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.first-items{
+    display: flex;
+    gap: 30px;
+}
+
+.items-left{
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.items-right{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.education-main-right-university{
+    font-weight: 600;
+}
+
+.experience-main-right-company{
+    font-weight: 600;
+}

@@ -1,0 +1,104 @@
+.main-left{
+    width: 50%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* forms view */
+
+.input-forms{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.input-containers{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.input-labels{
+    font-size: 20px;
+}
+
+.text-inputs{
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f3f4f6;
+    padding-left: 8px;
+}
+
+.start-end-date-containers{
+    display: flex;
+    gap: 20px;
+}
+
+.save-cancel-button-containers{
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons{
+    padding: 8px 16px 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.buttons:hover{
+    cursor: pointer;
+    transform: scale(1.03)
+}
+
+.cancel-button{
+    background: none;
+    border: 1px solid #808080;
+    color: #808080;
+}
+
+.save-button{
+    background-color: #377cf4;
+    color: white;
+    border: none;
+}
+
+/* items view */
+
+.items{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+.items:hover{
+    cursor: pointer;
+    background-color: #f3f4f6;
+}
+
+.add-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.add-button{
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    background: none;
+    border: 5px solid #f3f4f6;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.add-button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
