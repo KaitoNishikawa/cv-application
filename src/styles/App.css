@@ -8,5 +8,6 @@
   display: flex;
   gap: 30px;
   min-height: 100vh;
+  min-width: 900px;
   background-color: #f3f4f6;
 }

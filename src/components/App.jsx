@@ -89,8 +89,8 @@ function App() {
     setExperienceItems(newItems)
   }
 
-  const educationDetailsEditHandler = (e) => {    
-    let key = e.target.id
+  const educationDetailsEditHandler = (e) => {   
+    let key = e.target.firstChild.id
     let index = -1
 
     for(let i = 0; i < educationItems.length; i++){
@@ -107,7 +107,7 @@ function App() {
   }
 
   const experienceDetailsEditHandler = (e) => {    
-    let key = e.target.id
+    let key = e.target.firstChild.id
     let index = -1
 
     for(let i = 0; i < experienceItems.length; i++){
@@ -139,7 +139,6 @@ function App() {
         }
     }
     else{
-        console.log(experienceDetails)
         if(experienceDetails != null && experienceDetails.companyName != '' && experienceDetails.companyName[0] != ' '){
             let newItems = []
             for(let i = 0; i < experienceItems.length; i++){
@@ -183,6 +182,48 @@ function App() {
     }
   }
 
+  const wrapperMouseOverHandler = (e, x) => {
+    const xButton = e.target.previousSibling
+
+    if(x == 'enter'){
+        xButton.style.visibility = 'visible'
+    }
+    else{
+        xButton.style.visibility = 'hidden';
+    }
+    
+  }
+
+  const xMouseOverHandler = (e, x) => {
+    const xButton = e.target
+
+    xButton.style.visibility = 'visible'  
+  }
+
+  const xButtonHandler = (e, x) => {
+    let key = e.target.nextSibling.firstChild.id
+    let newItems = []
+    
+    if(x == 'ed'){
+        for(let i = 0; i < educationItems.length; i++){
+            if(educationItems[i].id != key){
+                newItems.push(educationItems[i])
+            }
+        }
+
+        setEducationItems(newItems)
+    }
+    else{
+        for(let i = 0; i < experienceItems.length; i++){
+            if(experienceItems[i].id != key){
+                newItems.push(experienceItems[i])
+            }
+        }
+
+        setExperienceItems(newItems)
+    }
+  }
+
   return (
     <div className='main'>
       <div className='main-left'>
@@ -210,7 +251,7 @@ function App() {
           <h1>Education</h1>
           {!isActiveEducation ? (
               <>
-                  <EducationItem details = {educationItems} handleChange={() => educationDetailsEditHandler}></EducationItem>
+                  <EducationItem details = {educationItems} handleChange={() => educationDetailsEditHandler} handleMouseOverWrapper={wrapperMouseOverHandler} handleMouseOverX={xMouseOverHandler} handleXButton={xButtonHandler}></EducationItem>
                   <div className="add-button-container">
                       <button className="add-button" onClick={() => setIsActiveEducation(true)}>+ Education</button>
                   </div>
@@ -254,10 +295,10 @@ function App() {
         </form>
         
         <form className="experience-form input-forms">
-          <h1>Personal Details</h1>
+          <h1>Experience</h1>
           {!isActiveExperience ? (
             <>
-                <ExperienceItem details = {experienceItems} handleChange={() => experienceDetailsEditHandler}></ExperienceItem>
+                <ExperienceItem details = {experienceItems} handleChange={() => experienceDetailsEditHandler} handleMouseOverWrapper={wrapperMouseOverHandler} handleMouseOverX={xMouseOverHandler} handleXButton={xButtonHandler}></ExperienceItem>
                 <div className="add-button-container">
                     <button className="add-button" onClick={() => setIsActiveExperience((prev) => !prev)}>+ Experience</button>
                 </div>

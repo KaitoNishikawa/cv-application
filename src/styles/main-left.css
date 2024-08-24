@@ -73,15 +73,41 @@
 
 /* items view */
 
+.items-wrapper{
+    position: relative;
+}
+
+.items-wrapper:hover{
+    cursor: pointer;
+    background-color: #f3f4f6;
+}
+
 .items{
-    padding: 10px;
+    height: 45px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
     font-size: 20px;
     border-radius: 7px;
 }
 
-.items:hover{
+.items-x{
+    position: absolute;
+    right: 15px;
+    top: 11px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+    outline: none;
+    background: none;
+    border: none;
+    z-index: 10;
+}
+
+.items-x:hover{
     cursor: pointer;
-    background-color: #f3f4f6;
+    font-size: 21px;
 }
 
 .add-button-container{
