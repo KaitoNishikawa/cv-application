@@ -17,8 +17,6 @@ function App() {
   const [isActiveExperience, setIsActiveExperience] = useState(false)
   const [educationEditIndex, setEducationEditIndex] = useState(-1)
   const [experienceEditIndex, setExperienceEditIndex] = useState(-1)
-//   const[isActiveEducationEdit, setIsActiveEducationEdit] = useState(false)
-//   const[isActiveExperienceEdit, setIsActiveExperienceEdit] = useState(false)
   const [educationItems, setEducationItems] = useState([])
   const [experienceItems, setExperienceItems] = useState([])
   const [personalDetails, setPersonalDetails] = useState(new personalDetailsClass())
@@ -263,33 +261,6 @@ function App() {
                 ) : (
                     <EducationInput handleChange={educationDetailsHandlerEdit} details={educationItems[educationEditIndex]} cancelHandler={cancelHandler} submitHandler={submitHandlerEdit} isEdit={true}></EducationInput>
                 )}
-
-                {/* <div className="input-containers">
-                    <label className="input-labels" htmlFor="school">School</label>
-                    <input className="text-inputs" type="text" name="school" id="school" placeholder="Enter school / university" onChange={educationDetailsHandler}/>
-                </div>
-                <div className="input-containers">
-                    <label className="input-labels" htmlFor="degree">Degree</label>
-                    <input className="text-inputs" type="text" name="degree" id="degree" placeholder="Enter degree / field of study" onChange={educationDetailsHandler}/>
-                </div>
-                <div className="start-end-date-containers">
-                    <div className="input-containers">
-                        <label className="input-labels" htmlFor="start-date">Start Date</label>
-                        <input className="text-inputs" type="text" name="startDate" id="start-date" placeholder="Enter start date" onChange={educationDetailsHandler}/>
-                    </div>
-                    <div className="input-containers">
-                        <label className="input-labels" htmlFor="end-date">End date</label>
-                        <input className="text-inputs" type="text" name="endDate" id="end-date" placeholder="Enter end date" onChange={educationDetailsHandler}/>
-                    </div>
-                </div>                
-                <div className="input-containers">
-                    <label className="input-labels" htmlFor="location">Location</label>
-                    <input className="text-inputs" type="text" name="location" id="location" placeholder="Enter location" onChange={educationDetailsHandler}/>
-                </div>
-                <div className="save-cancel-button-containers">
-                    <button className="cancel-button buttons" onClick={() => cancelHandler('ed')}>Cancel</button>
-                    <button type='submit' className="save-button buttons" onClick={() => submitHandler('ed')}>Save</button>
-                </div> */}
               </>
           )}                    
         </form>
@@ -310,36 +281,6 @@ function App() {
                 ) : (
                     <ExperienceInput handleChange={experienceDetailsHandlerEdit} details={experienceItems[experienceEditIndex]} cancelHandler={cancelHandler} submitHandler={submitHandlerEdit} isEdit={true}></ExperienceInput>
                 )}
-                {/* <div className="input-containers">
-                    <label className="input-labels" htmlFor="company-name">Company name</label>
-                    <input className="text-inputs" type="text" name="companyName" id="company-name" placeholder="Enter company name" onChange={experienceDetailsHandler}/>
-                </div>
-                <div className="input-containers">
-                    <label className="input-labels" htmlFor="position-title">Position title</label>
-                    <input className="text-inputs" type="text" name="positionTitle" id="position-title" placeholder="Enter position title" onChange={experienceDetailsHandler}/>
-                </div>
-                <div className="start-end-date-containers">
-                    <div className="input-containers">
-                        <label className="input-labels" htmlFor="start-date">Start Date</label>
-                        <input className="text-inputs" type="text" name="startDate" id="start-date" placeholder="Enter start date" onChange={experienceDetailsHandler}/>
-                    </div>
-                    <div className="input-containers">
-                        <label className="input-labels" htmlFor="end-date">End date</label>
-                        <input className="text-inputs" type="text" name="endDate" id="end-date" placeholder="Enter end date" onChange={experienceDetailsHandler}/>
-                    </div>
-                </div>                
-                <div className="input-containers">
-                    <label className="input-labels" htmlFor="location">Location</label>
-                    <input className="text-inputs" type="text" name="location" id="location" placeholder="Enter location" onChange={experienceDetailsHandler}/>
-                </div>
-                <div className="input-containers">
-                    <label className="input-labels" htmlFor="description">Description</label>
-                    <input className="text-inputs" type="text" name="description" id="description" placeholder="Enter description" onChange={experienceDetailsHandler}/>
-                </div>
-                <div className="save-cancel-button-containers">
-                    <button className="cancel-button buttons" onClick={() => cancelHandler('ex')}>Cancel</button>
-                    <button type="submit" className="save-button buttons" onClick={() => submitHandler('ex')}>Save</button>
-                </div> */}
             </>
           )}                    
         </form>
