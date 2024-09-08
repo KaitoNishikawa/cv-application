@@ -1,4 +1,4 @@
-https://66cbb60585fd078d8b7bfbcf--lucky-horse-abbd7a.netlify.app/
+https://master--lucky-horse-abbd7a.netlify.app/
 
 # React + Vite
 
