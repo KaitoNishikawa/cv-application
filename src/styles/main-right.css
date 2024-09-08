@@ -1,5 +1,6 @@
 .main-right{
     width: 50%;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgb(177, 177, 177);
@@ -80,3 +81,10 @@
 .experience-main-right-company{
     font-weight: 600;
 }
+
+/* @media (max-width: 900px){
+    .main-right{
+        flex-grow: 2;
+        min-width: 50%;
+    }
+} */
